@@ -25,3 +25,8 @@
 #         print(f"{i} * {j} = {start * j}")
 #     length -= 1
 
+
+# list comprehension
+
+lst = ["even" if i%2 == 0 else "odd"  for i in range(1,21)]
+print(lst)
