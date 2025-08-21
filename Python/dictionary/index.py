@@ -22,3 +22,8 @@ result = {"Ali":80,"Muhammad":89,"Usama":69,"Asad":56}
 passed = [name for name,value in result.items() if value >= 70]
 print(f"Congratulations all these students you are passed {passed}")
 # result Congratulations all these students you are passed ['Ali', 'Muhammad']
+
+result = [{"name" : "asad", "marks":80},{"name": "Muhammad", "marks":89},{"name":"Usama", "marks":69},{"name" : "salmnan", "marks":56}]
+passed = [{"name": name["name"], "Roll-No" : "211"} for name in result if name["marks"] >= 70]
+print(f"Congratulations all these students you are passed {passed}")
+# result Congratulations all these students you are passed [{'name': 'asad', 'Roll-No': '211'}, {'name': 'Muhammad', 'Roll-No': '211'}]

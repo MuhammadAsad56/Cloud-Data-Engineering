@@ -43,11 +43,11 @@ import copy
 # name = name.replace("Doe", "Mon")# replace method se string ko replace karte hai
 # print(name)
 
-text = "hello world"
-print(text.find("o"))  # Output: 6
+# text = "hello world"
+# print(text.find("o"))  # Output: 4 returns index value of character if not find return -1
 
-# array = [1, 2]
-# print(array.pop(1))
+# array = [1, 2, 6, "asad"]
+# print(array.pop(3))
 
 
 # shallow copy
@@ -97,8 +97,8 @@ list_item = ["asad", "raza", 5, True]
 # bio_data[0] = "khan"
 # print(bio_data)
 
-original = ["asd", [["salman"]]]
-shallow = original.copy()  # or copy.copy(original)
+# original = ["asd", [["salman"]]]
+# shallow = original.copy()  # or copy.copy(original)
 
-shallow[1][0] = "no"
-print(original, shallow)
+# shallow[1][0] = "no"
+# print(original, shallow)

@@ -25,8 +25,18 @@
 #         print(f"{i} * {j} = {start * j}")
 #     length -= 1
 
+# lst = ["asad", "raza","khan"]
+# for name in lst:
+#     if(name.startswith("r")):
+#         print(name)
+#     else:
+#         print("out")
+
+# result: out raza out
 
 # list comprehension
 
-lst = ["even" if i%2 == 0 else "odd"  for i in range(1,21)]
-print(lst)
+# lst = [i for i in range(1,21) if i%2 == 0 ]
+# print(lst)
+
+
