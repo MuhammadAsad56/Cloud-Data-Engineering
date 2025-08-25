@@ -102,3 +102,38 @@ list_item = ["asad", "raza", 5, True]
 
 # shallow[1][0] = "no"
 # print(original, shallow)
+
+first_name = input("enter a name: ")
+email = input("enter a email: ")
+password = input("enter a password: ")
+
+lst = []
+
+def registration(name, email, password):
+    if not name or not email or not password:
+        print("these are required")
+    lst.append({
+        "first_name" : name,
+        "email" : email,
+        "password" : password,
+    })
+
+
+registration(first_name, email, password)
+
+login_email = input("enter a login email:" )
+login_password = input("enter a login pass:" )
+
+def login (email, password):
+    check = [data for data in lst if data["email"] == email and data["password"] == password]
+    if len(check) >= 1:
+        print("your are welcome ")
+    else:
+        print("something went wrong")
+login(login_email, login_password)
+
+
+def func (num1,num2, *args):    
+    print(args)
+    return num1 + num2 
+print(func(21, 21, 5,6,7))
