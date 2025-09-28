@@ -1,0 +1,1 @@
+this will automatically close the file this will append on previous text
