@@ -436,6 +436,7 @@ list_item = ["asad", "raza", 5, True]
 
 # CSV HANdling
 
+
 import csv 
 # years = []
 # event = []
@@ -447,17 +448,17 @@ import csv
 #     for line in content:
 #         competitions.append(line)
 
-# for line in competitions[1:]:
-#         years.append(line[0])
-#         event.append(line[1])
-#         winner.append(line[2])
+# for row in competitions[1:]:
+#         years.append(row[0])
+#         event.append(row[1])
+#         winner.append(row[2])
 
-# print(years, event)
+# print(years, event, winner)
 
 
-# with open('./competitions.csv', "a" , newline='') as f:
+# with open('./competitions.csv', "a", newline="") as f:
 #      data_handler = csv.writer(f, delimiter=",")
-#      data_handler.writerow(["1995", "Best-Kept Lawn","None"])
+#      data_handler.writerows([["1995", "Best-Kept Lawn","None"],["1998", "Best Lawn","Loser"]])
 
 
 
@@ -468,13 +469,15 @@ import json
 
 
 # Step 1: Read existing JSON file
-with open("./competitions.json", "r") as f:
-    data = json.load(f)
-    data.append({"weight": 90})
+# with open("./competitions.json", "r") as f:
+#     data = json.load(f)
+#     data[-1] = {**data[-1], "unit": "kg"}
+
 
 # Step 3: Write back updated JSON
-with open("./competitions.json", "w") as f:
-    json.dump(data, f,)
+# with open("./competitions.json", "w") as f:
+#     json.dump(data, f,)
+#     print(data)
 
 
 
