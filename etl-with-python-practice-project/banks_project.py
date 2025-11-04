@@ -5,25 +5,25 @@ import pandas as pd
 import sqlite3
 from datetime import datetime
 
-# url = 'https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks'
-# table_attribs = "By market capitalization"
+url = 'https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks'
+table_attribs = "By market capitalization"
 # # print(requests.get(url).text)
 
-# soup = BeautifulSoup(requests.get(url).text, "html.parser")
-# table = soup.find("span", string=table_attribs).find_next("table")
-# # print(table)
-# df = pd.read_html(StringIO(str(table)))[0]
-# # print(df['Market cap (US$ billion)'])
+soup = BeautifulSoup(requests.get(url).text, "html.parser")
+table = soup.find("span", string=table_attribs).find_next("table")
+# print(table)
+df = pd.read_html(StringIO(str(table)))[0]
+# print(df['Market cap (US$ billion)'])
 
 # message = 'Data extraction complete. Initiating Transformation process'
 
-# # with open('./logs/code_log.txt', 'a') as f:
-# #         f.write(f'{datetime.now()}: {message}\n')
+# with open('./logs/code_log.txt', 'a') as f:
+#         f.write(f'{datetime.now()}: {message}\n')
 
-# exchange_rate = pd.read_csv(".\input\exchange_rate.csv", index_col=0).to_dict()['Rate']
+exchange_rate = pd.read_csv(".\input\exchange_rate.csv", index_col=0).to_dict()['Rate']
 # print(df['Market cap (US$ billion)'])
 # print(round(df['Market cap (US$ billion)'] * exchange_rate['EUR'],2))
-# # print(exchange_rate)
+print(exchange_rate)
 
 
 
@@ -44,9 +44,9 @@ def log_progress(message):
 
 
 
-url = 'https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks'
+# url = 'https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks'
 # print(requests.get(url).text)
-table_attribs = "edit"
+# table_attribs = "edit"
 
 soup = BeautifulSoup(requests.get(url).text, "html.parser")
 table = soup.find('a', string=table_attribs).find_next('table')

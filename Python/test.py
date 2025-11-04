@@ -449,16 +449,17 @@ import csv
 #         competitions.append(line)
 
 # for row in competitions[1:]:
-#         years.append(row[0])
-#         event.append(row[1])
-#         winner.append(row[2])
+#         print(row)
+        # years.append(row[0])
+        # event.append(row[1])
+        # winner.append(row[2])
 
 # print(years, event, winner)
 
 
-# with open('./competitions.csv', "a", newline="") as f:
-#      data_handler = csv.writer(f, delimiter=",")
-#      data_handler.writerows([["1995", "Best-Kept Lawn","None"],["1998", "Best Lawn","Loser"]])
+# with open('./competitions.csv', "a") as f:
+#      data_handler = csv.writer(f)
+#      data_handler.writerow(["2012","Asia Cup","Pakistan"])
 
 
 
@@ -480,9 +481,3 @@ import json
 #     print(data)
 
 
-
-
-
-
-
-    
