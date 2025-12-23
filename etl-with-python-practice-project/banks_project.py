@@ -13,12 +13,12 @@ soup = BeautifulSoup(requests.get(url).text, "html.parser")
 table = soup.find("span", string=table_attribs).find_next("table")
 # print(table)
 df = pd.read_html(StringIO(str(table)))[0]
-# print(df['Market cap (US$ billion)'])
+print(df['Market cap (US$ billion)'])
 
-# message = 'Data extraction complete. Initiating Transformation process'
+message = 'Data extraction complete. Initiating Transformation process'
 
-# with open('./logs/code_log.txt', 'a') as f:
-#         f.write(f'{datetime.now()}: {message}\n')
+with open('./logs/code_log.txt', 'a') as f:
+        f.write(f'{datetime.now()}: {message}\n')
 
 exchange_rate = pd.read_csv(".\input\exchange_rate.csv", index_col=0).to_dict()['Rate']
 # print(df['Market cap (US$ billion)'])
