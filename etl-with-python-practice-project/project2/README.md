@@ -20,6 +20,18 @@ The goal of this project is to demonstrate data engineering fundamentals such as
 - Extracted sales data using API requests
 - Retrieved raw data in structured format
 
+🛠️ Tools & Technologies
+
+Python
+
+Pandas
+
+SQL
+
+SQL Server
+
+SQLAlchemy
+
 ### 2️⃣ Transform
 Performed data cleaning and transformation using Python:
 - Removed null values
