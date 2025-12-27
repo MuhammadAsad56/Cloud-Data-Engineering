@@ -38,7 +38,7 @@ df.to_sql(
     con=conn,
     index=False,
     if_exists='append'
-)
+).
 
 ## 📊 SQL Analysis & Insights
 
@@ -57,3 +57,4 @@ After loading the transformed data into SQL Server, multiple analytical queries 
 - Determined the highest-selling month for each product category.
 
 These queries demonstrate practical use of SQL aggregations, window functions, and time-based analysis on real-world sales data.
+
