@@ -28,10 +28,6 @@ Performed data cleaning and transformation using Python:
 - Formatted date columns
 - Prepared clean, analytics-ready data
 
-### 3️⃣ Load
-Loaded the transformed data into SQL Server using Python and SQLAlchemy.
-
-```python
 # Load the data into SQL Server using append option
 df.to_sql(
     'df_orders',
@@ -57,4 +53,5 @@ After loading the transformed data into SQL Server, multiple analytical queries 
 - Determined the highest-selling month for each product category.
 
 These queries demonstrate practical use of SQL aggregations, window functions, and time-based analysis on real-world sales data.
+
 
