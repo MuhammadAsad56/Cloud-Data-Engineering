@@ -40,14 +40,20 @@ df.to_sql(
     if_exists='append'
 )
 
-🛠️ Tools & Technologies
+## 📊 SQL Analysis & Insights
 
-Python
+After loading the transformed data into SQL Server, multiple analytical queries were performed:
 
-Pandas
+### 🔹 Top-Selling Products
+- Identified top 10 products based on total sales using aggregation and sorting.
 
-SQL
+### 🔹 Regional Sales Analysis
+- Identified top 5 highest-selling products in each region using window functions (`ROW_NUMBER`).
 
-SQL Server
+### 🔹 Year-over-Year Monthly Comparison
+- Compared month-over-month sales between 2022 and 2023 to analyze growth trends.
 
-SQLAlchemy
+### 🔹 Category Performance Analysis
+- Determined the highest-selling month for each product category.
+
+These queries demonstrate practical use of SQL aggregations, window functions, and time-based analysis on real-world sales data.
