@@ -88,5 +88,63 @@ select c.Name customerName, p.Name productName, ct.Name categoryName
 	on po.SupplierID = sp.SupplierID
 
 
+-- Q6. Find all shipments with details of warehouse, manager, and products shipped. 
+-- Display: ShipmentID, WarehouseName, ManagerName, ProductName, QuantityShipped, and TrackingNumber.
 
+
+SELECT
+    sh.ShipmentID,
+    l.Name AS WarehouseName,
+    e.Name AS ManagerName,
+    p.Name AS ProductName,
+    sd.Quantity AS QuantityShipped,
+    sh.TrackingNumber
+FROM shipment sh
+JOIN warehouse w
+    ON sh.WarehouseID = w.WarehouseID
+JOIN location l
+    ON w.LocationID = l.LocationID
+JOIN employee e
+    ON w.ManagerID = e.EmployeeID
+JOIN shipmentdetail sd
+    ON sh.ShipmentID = sd.ShipmentID
+JOIN product p
+    ON sd.ProductID = p.ProductID;
+
+
+
+-- Q7. Find the top 3 highest-value orders per customer using RANK(). 
+-- Display CustomerID, CustomerName, OrderID, and TotalAmount.
+
+WITH RankedOrders AS (
+    SELECT
+        so.OrderID,
+        so.CustomerID,
+        c.Name AS CustomerName,
+        so.TotalAmount,
+        RANK() OVER (
+            PARTITION BY so.CustomerID
+            ORDER BY so.TotalAmount DESC
+        ) AS order_rank
+    FROM salesorder so
+    JOIN customer c
+        ON so.CustomerID = c.CustomerID
+)
+
+SELECT
+    CustomerID,
+    CustomerName,
+    OrderID,
+    TotalAmount
+FROM RankedOrders
+WHERE order_rank <= 3
+ORDER BY CustomerID, TotalAmount DESC;
+
+
+
+-- Q8. For each product, show its sales history with the previous and next sales quantities (based on order date). 
+--Display ProductID, ProductName, OrderID, OrderDate, Quantity, PrevQuantity, and NextQuantity.
+
+
+-- not solved
 
